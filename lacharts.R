@@ -55,6 +55,6 @@ md_tibble <-
 
 ## Output HTML file
 
-generate_scroll_doc(path = "test.html",
+generate_scroll_doc(path = "index.html",
                     inputs = md_tibble)
   

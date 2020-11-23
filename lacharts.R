@@ -14,7 +14,7 @@ dflachart <- read_csv("ladata.csv") %>%
 plotglachart <- dflachart %>%
   filter(CA=="S12000049") %>%
   ggplot(aes(x=date2, y=DailyPositive)) +
-           geom_col() +
+           geom_col(width=1) +
            ylab("Daily Cases") +
            xlab("") +
            scale_x_date(date_labels = "%B") +
@@ -22,15 +22,15 @@ plotglachart <- dflachart %>%
         axis.text.y=element_text(size=5),
         axis.title.y=element_blank())
 ggsave("gla.png",   
-       width = 4,
-       height = 4,
+       width = 5,
+       height = 5,
        units = c("cm"))
 
 
 plotedchart <- dflachart %>%
   filter(CA=="S12000036") %>%
   ggplot(aes(x=date2, y=DailyPositive)) +
-  geom_col() +
+  geom_col(width=1) +
   ylab("Daily Cases") +
   xlab("") +
   scale_x_date(date_labels = "%B") +
@@ -38,8 +38,8 @@ plotedchart <- dflachart %>%
       axis.text.y=element_text(size=5),
       axis.title.y=element_blank())
 ggsave("ed.png",   
-       width = 4,
-       height = 4,
+       width = 5,
+       height = 5,
        units = c("cm"))
 
 
